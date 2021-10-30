@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RulesList  /> should match snapshot 1`] = `
+<div
+  class="RulesList__Div-sc-4i5dmf-0"
+>
+  Rules List
+</div>
+`;
