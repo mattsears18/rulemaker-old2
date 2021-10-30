@@ -21,11 +21,14 @@ export function App() {
   return (
     <BrowserRouter>
       <Helmet
-        titleTemplate="%s - React Boilerplate"
-        defaultTitle="React Boilerplate"
+        titleTemplate="%s - Rulemaker"
+        defaultTitle="Rulemaker"
         htmlAttributes={{ lang: i18n.language }}
       >
-        <meta name="description" content="A React Boilerplate application" />
+        <meta
+          name="description"
+          content="A platform for creating rules through direct democracy"
+        />
       </Helmet>
 
       <Switch>

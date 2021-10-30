@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<RulesList  /> should match snapshot 1`] = `
+exports[`<OnlineUsersList  /> should match snapshot 1`] = `
 .c0 {
   border: 1px solid black;
   text-align: center;
@@ -14,10 +14,11 @@ exports[`<RulesList  /> should match snapshot 1`] = `
   class="c0"
 >
   <h2>
-    Rules List
+    Online Users
   </h2>
   <div>
-    a rule
+    user
   </div>
+  
 </div>
 `;

@@ -9,7 +9,18 @@ import styled from 'styled-components/macro';
 interface Props {}
 
 export function RulesList(props: Props) {
-  return <Div>Rules List</Div>;
+  return (
+    <Div>
+      <h2>Rules List</h2>
+      <div>a rule</div>
+    </Div>
+  );
 }
 
-const Div = styled.div``;
+const Div = styled.div`
+  border: 1px solid black;
+  text-align: center;
+  ul {
+    list-style: none;
+  }
+`;

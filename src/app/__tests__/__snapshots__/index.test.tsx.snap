@@ -3,7 +3,7 @@
 exports[`<App /> should render and match the snapshot 1`] = `
 <BrowserRouter>
   <Helmet
-    defaultTitle="React Boilerplate"
+    defaultTitle="Rulemaker"
     defer={true}
     encodeSpecialCharacters={true}
     htmlAttributes={
@@ -11,10 +11,10 @@ exports[`<App /> should render and match the snapshot 1`] = `
         "lang": undefined,
       }
     }
-    titleTemplate="%s - React Boilerplate"
+    titleTemplate="%s - Rulemaker"
   >
     <meta
-      content="A React Boilerplate application"
+      content="A platform for creating rules through direct democracy"
       name="description"
     />
   </Helmet>
