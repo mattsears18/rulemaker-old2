@@ -38,7 +38,7 @@
     "jest-styled-components": "7.0.4",
     "lint-staged": "10.3.0",
     "node-plop": "0.26.2",
-    "plop": "2.7.4",
+    "plop": "2.7.6",
     "prettier": "2.3.2",
     "react": "17.0.2",
     "react-app-polyfill": "2.0.0",
