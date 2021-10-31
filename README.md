@@ -1,3 +1,22 @@
+# Rulemaker
+
+A platform for writing rules through direct democracy
+
+## Start
+
+1.  Run [Docker Desktop](https://www.docker.com/products/docker-desktop)
+2.  Start the database and API in Docker:
+
+        yarn api
+
+3.  Start the app in development mode:
+
+        yarn start
+
+<br><br><br><br><hr>
+
+### Bootstrapped with Create React App React Boilerplate template...
+
 <img width="914" alt="React Boilerplate Meets CRA" src="https://user-images.githubusercontent.com/3495307/80274591-2d5daa00-86e4-11ea-8fba-404f1cdba87e.png" align="center">
 <br />
 
