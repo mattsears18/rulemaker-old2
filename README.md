@@ -1,17 +1,22 @@
 # Rulemaker
 
+![Known Vulnerabilities](https://snyk.io/test/github/mattsears18/rulemaker/badge.svg)
+![Depfu](https://img.shields.io/depfu/mattsears18/rulemaker)
+![David](https://img.shields.io/david/mattsears18/rulemaker)
+![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/mattsears18/rulemaker)
+
 A platform for writing rules through direct democracy
 
 ## Start
 
 1.  Run [Docker Desktop](https://www.docker.com/products/docker-desktop)
-2.  Start the database and API in Docker:
+2.  Start the database and API in Docker and open the Hasura console:
 
         yarn api
 
 3.  Start the app in development mode:
 
-        yarn start
+        yarn dev
 
 <br><br><br><br><hr>
 
