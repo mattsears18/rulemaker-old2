@@ -1,24 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<RulesList  /> should match snapshot 1`] = `
-.c0 {
-  border: 1px solid black;
-  text-align: center;
-}
-
-.c0 ul {
-  list-style: none;
-}
-
-<div
-  class="c0"
->
-  <h2>
-    Rules List
-  </h2>
-  <div>
-    a rule
-  </div>
-  <div />
-</div>
+<p>
+  Loading...
+</p>
 `;
