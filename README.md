@@ -2,6 +2,7 @@
 
 ![](https://badgen.net/github/dependabot/mattsears18/rulemaker)
 ![](https://flat.badgen.net/github/license/mattsears18/rulemaker)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/62be8d3094c24112b3e1e547dd59b0aa)](https://app.codacy.com/gh/mattsears18/rulemaker?utm_source=github.com&utm_medium=referral&utm_content=mattsears18/rulemaker&utm_campaign=Badge_Grade_Settings)
 [![Known Vulnerabilities](https://snyk.io/test/github/mattsears18/rulemaker/badge.svg)](https://app.snyk.io/org/mattsears18/project/23188dce-e5a2-40f5-aa16-7d57cb9c2ad7)
 ![Depfu](https://img.shields.io/depfu/mattsears18/rulemaker)
 ![David](https://img.shields.io/david/mattsears18/rulemaker)
