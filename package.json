@@ -63,7 +63,7 @@
     "subscriptions-transport-ws": "^0.9.19",
     "ts-node": "10.0.0",
     "typescript": "4.2.2",
-    "web-vitals": "2.1.0"
+    "web-vitals": "2.1.2"
   },
   "scripts": {
     "api": "concurrently \"sleepms 3000 && open http://localhost:8080/console\" \"docker-compose --project-directory ./api --project-name rulemaker up --force-recreate\"",
