@@ -1,5 +1,7 @@
 # Rulemaker
 
+![](https://badgen.net/github/dependabot/mattsears18/rulemaker)
+![](https://flat.badgen.net/github/license/mattsears18/rulemaker)
 [![Known Vulnerabilities](https://snyk.io/test/github/mattsears18/rulemaker/badge.svg)](https://app.snyk.io/org/mattsears18/project/23188dce-e5a2-40f5-aa16-7d57cb9c2ad7)
 ![Depfu](https://img.shields.io/depfu/mattsears18/rulemaker)
 ![David](https://img.shields.io/david/mattsears18/rulemaker)
