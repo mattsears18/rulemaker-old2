@@ -13,6 +13,7 @@ export function RulesList(props: Props) {
     <Div>
       <h2>Rules List</h2>
       <div>a rule</div>
+      <div>{process.env.REACT_APP_GRAPHQL_ENDPOINT}</div>
     </Div>
   );
 }

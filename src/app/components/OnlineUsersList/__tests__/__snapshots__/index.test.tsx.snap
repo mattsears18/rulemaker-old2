@@ -14,11 +14,11 @@ exports[`<OnlineUsersList  /> should match snapshot 1`] = `
   class="c0"
 >
   <h2>
-    Online Users
+    Online Users (
+    )
   </h2>
-  <div>
-    user
-  </div>
-  
+  <p>
+    Loading...
+  </p>
 </div>
 `;

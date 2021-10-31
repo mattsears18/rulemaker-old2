@@ -1,7 +1,7 @@
-import { OnlineUsersList } from 'app/components/OnlineUsersList';
-import { RulesList } from 'app/components/RulesList';
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { OnlineUsersList } from 'app/components/OnlineUsersList/Loadable';
+import { RulesList } from 'app/components/RulesList/Loadable';
 
 export function HomePage() {
   return (

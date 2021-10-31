@@ -2,6 +2,9 @@ import * as React from 'react';
 import { render } from '@testing-library/react';
 
 import { OnlineUsersList } from '..';
+import { MockedProvider } from '@apollo/client/testing';
+
+const mocks = [];
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => {
@@ -16,7 +19,11 @@ jest.mock('react-i18next', () => ({
 
 describe('<OnlineUsersList  />', () => {
   it('should match snapshot', () => {
-    const loadingIndicator = render(<OnlineUsersList />);
+    const loadingIndicator = render(
+      <MockedProvider mocks={mocks}>
+        <OnlineUsersList />
+      </MockedProvider>,
+    );
     expect(loadingIndicator.container.firstChild).toMatchSnapshot();
   });
 });

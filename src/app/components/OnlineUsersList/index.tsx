@@ -4,22 +4,46 @@
  *
  */
 import * as React from 'react';
+import { useSubscription, gql } from '@apollo/client';
 import styled from 'styled-components/macro';
-import { useTranslation } from 'react-i18next';
-import { messages } from './messages';
+
+const ONLINE_USERS_SUBSCRIPTION = gql`
+  subscription MySubscription {
+    online_users {
+      first_name
+      last_name
+      last_seen
+    }
+  }
+`;
 
 interface Props {}
 
 export function OnlineUsersList(props: Props) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { t, i18n } = useTranslation();
+  const { loading, error, data } = useSubscription(ONLINE_USERS_SUBSCRIPTION);
+
+  if (error) {
+    throw error;
+  }
 
   return (
     <Div>
-      <h2>Online Users</h2>
-      <div>user</div>
-      {t('')}
-      {/*  {t(...messages.someThing())}  */}
+      <h2>Online Users ({!loading && data.online_users.length})</h2>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <div>
+          {data.online_users.map(
+            (user: { id: string; first_name: string; last_name: string }) => {
+              return (
+                <div key={user.id}>
+                  {user.first_name} {user.last_name}
+                </div>
+              );
+            },
+          )}
+        </div>
+      )}
     </Div>
   );
 }
