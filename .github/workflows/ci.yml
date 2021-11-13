@@ -1,0 +1,94 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  unit_tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    continue-on-error: true
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Configure npm auth
+        uses: filipstefansson/set-npm-token-action@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+
+      - name: Install the App
+        uses: ./.github/actions/install
+
+      - name: Run Tests
+        run: yarn test:ci
+
+      - name: Upload Coverage to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+  typecheck:
+    name: Typecheck
+    runs-on: ubuntu-latest
+    continue-on-error: true
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Configure npm auth
+        uses: filipstefansson/set-npm-token-action@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+
+      - name: Install the App
+        uses: ./.github/actions/install
+
+      - name: Typecheck
+        run: yarn typecheck
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    continue-on-error: true
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Configure npm auth
+        uses: filipstefansson/set-npm-token-action@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+
+      - name: Install the App
+        uses: ./.github/actions/install
+
+      - name: Lint Summary
+        run: yarn lint:s
+
+      - name: Run Linter
+        run: yarn lint --max-warnings=0
+
+  format:
+    name: Format Code
+    runs-on: ubuntu-latest
+    continue-on-error: true
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Configure npm auth
+        uses: filipstefansson/set-npm-token-action@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+
+      - name: Install the App
+        uses: ./.github/actions/install
+
+      - name: Prettify code
+        uses: creyD/prettier_action@v4.0
