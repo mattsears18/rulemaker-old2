@@ -1,20 +1,13 @@
-const fs = require('fs');
-const path = require('path');
-
-const prettierOptions = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, '.prettierrc'), 'utf8'),
-);
-
 module.exports = {
-  extends: ['react-app', 'prettier'],
-  plugins: ['prettier'],
-  rules: {
-    'prettier/prettier': ['error', prettierOptions],
-  },
+  root: true,
+  extends: ['eslint:recommended', 'next/core-web-vitals', 'prettier'],
+  plugins: ['testing-library'],
   overrides: [
+    // Only uses Testing Library lint rules in test files
     {
-      files: ['**/*.ts?(x)'],
-      rules: { 'prettier/prettier': ['warn', prettierOptions] },
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      extends: ['plugin:testing-library/react'],
     },
   ],
+  rules: {},
 };

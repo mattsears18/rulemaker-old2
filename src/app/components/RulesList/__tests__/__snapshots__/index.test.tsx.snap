@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<RulesList  /> should match snapshot 1`] = `
-<p>
-  Loading...
-</p>
-`;
