@@ -4,7 +4,7 @@
   "author": "Devias",
   "private": true,
   "engines": {
-    "node": "16.13.0"
+    "node": "14.18.1"
   },
   "scripts": {
     "build": "next build",
