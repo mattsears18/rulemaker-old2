@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: ['eslint:recommended', 'next/core-web-vitals', 'prettier'],
+  extends: ['next/core-web-vitals', 'prettier'],
   plugins: ['testing-library'],
   overrides: [
     // Only uses Testing Library lint rules in test files
@@ -9,5 +9,8 @@ module.exports = {
       extends: ['plugin:testing-library/react'],
     },
   ],
-  rules: {},
+  rules: {
+    'react/display-name': 'warn',
+  },
+  globals: { React: true, JSX: true },
 };
