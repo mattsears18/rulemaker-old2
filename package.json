@@ -7,6 +7,7 @@
     "node": "14.18.1"
   },
   "scripts": {
+    "api": "concurrently \"sleepms 3000 && open http://localhost:8080/console\" \"docker-compose --project-directory ./api --project-name rulemaker up --force-recreate\"",
     "build": "next build",
     "build:export": "next build && next export",
     "dev": "next",
@@ -106,6 +107,7 @@
     "@testing-library/user-event": "13.2.1",
     "@typescript-eslint/eslint-plugin": "5.3.1",
     "babel-jest": "27.0.6",
+    "concurrently": "6.4.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "19.0.0",
     "eslint-config-next": "12.0.3",
@@ -118,6 +120,7 @@
     "jest": "27.0.6",
     "next-transpile-modules": "^9.0.0",
     "prettier": "2.4.1",
-    "react-test-renderer": "17.0.2"
+    "react-test-renderer": "17.0.2",
+    "sleep-ms": "2.0.1"
   }
 }
