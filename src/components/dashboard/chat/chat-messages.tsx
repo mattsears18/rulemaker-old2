@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Box } from '@mui/material';
 import type { Message, Participant } from '../../../types/chat';
 import { ChatMessage } from './chat-message';
+import { useAuth } from 'src/hooks/use-auth';
 
 interface ChatMessagesProps {
   messages: Message[];
@@ -11,12 +12,8 @@ interface ChatMessagesProps {
 
 export const ChatMessages: FC<ChatMessagesProps> = (props) => {
   const { messages, participants, ...other } = props;
-  // To get the user from the authContext, you can use
-  // `const { user } = useAuth();`
-  const user = {
-    avatar: '/static/mock-images/avatars/avatar-anika_visser.png',
-    name: 'Anika Visser',
-  };
+
+  const { user } = useAuth();
 
   return (
     <Box sx={{ p: 2 }} {...other}>

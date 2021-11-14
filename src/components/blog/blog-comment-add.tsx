@@ -6,14 +6,11 @@ import { PaperClip as PaperClipIcon } from '../../icons/paper-clip';
 import { Photograph as PhotographIcon } from '../../icons/photograph';
 import { Plus as PlusIcon } from '../../icons/plus';
 import { getInitials } from '../../utils/get-initials';
+import { useAuth } from 'src/hooks/use-auth';
 
 export const BlogCommentAdd: FC = (props) => {
   // To get the user from the authContext, you can use
-  // `const { user } = useAuth();`
-  const user = {
-    avatar: '/static/mock-images/avatars/avatar-anika_visser.png',
-    name: 'Anika Visser',
-  };
+  const { user } = useAuth();
 
   return (
     <div {...props}>

@@ -11,6 +11,7 @@ import {
   Typography,
 } from '@mui/material';
 import type { Thread } from '../../../types/chat';
+import { useAuth } from 'src/hooks/use-auth';
 
 const formatDistanceLocale = {
   lessThanXSeconds: '{{count}}s',
@@ -55,11 +56,8 @@ interface ChatThreadItemProps {
 
 export const ChatThreadItem: FC<ChatThreadItemProps> = (props) => {
   const { active, thread, onSelect, ...other } = props;
-  // To get the user from the authContext, you can use
-  // `const { user } = useAuth();`
-  const user = {
-    id: '5e86809283e28b96d2d38537',
-  };
+
+  const { user } = useAuth();
 
   const recipients = thread.participants.filter(
     (participant) => participant.id !== user.id

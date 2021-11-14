@@ -22,6 +22,7 @@ import { Phone as PhoneIcon } from '../../../icons/phone';
 import { DotsHorizontal as DotsHorizontalIcon } from '../../../icons/dots-horizontal';
 import { Trash as TrashIcon } from '../../../icons/trash';
 import type { Participant } from '../../../types/chat';
+import { useAuth } from 'src/hooks/use-auth';
 
 interface ChatThreadToolbarProps {
   participants: Participant[];
@@ -31,11 +32,8 @@ export const ChatThreadToolbar: FC<ChatThreadToolbarProps> = (props) => {
   const { participants, ...other } = props;
   const moreRef = useRef<HTMLButtonElement | null>(null);
   const [openMenu, setOpenMenu] = useState<boolean>(false);
-  // To get the user from the authContext, you can use
-  // `const { user } = useAuth();`
-  const user = {
-    id: '5e86809283e28b96d2d38537',
-  };
+
+  const { user } = useAuth();
 
   const recipients = participants.filter(
     (participant) => participant.id !== user.id
