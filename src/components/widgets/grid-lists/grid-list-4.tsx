@@ -41,7 +41,7 @@ const applicants = [
     commonConnections: 17,
     cover: '/static/mock-images/covers/cover_1.jpg',
     name: 'Anika Visser',
-    skills: ['BackEnd development', 'Firebase', 'MongoDB', 'ExpressJS'],
+    skills: ['BackEnd development', 'MongoDB', 'ExpressJS'],
   },
 ];
 

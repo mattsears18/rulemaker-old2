@@ -19,10 +19,11 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Material Kit Pro</title>
+        <title>Rulemaker.io</title>
       </Head>
       <main>
-        <HomeHero />
+        <div>Hello</div>
+        {/* <HomeHero />
         <Divider />
         <HomeDevelopers />
         <Divider />
@@ -30,7 +31,7 @@ const Home: NextPage = () => {
         <HomeTestimonials />
         <HomeFeatures />
         <Divider />
-        <HomeClients />
+        <HomeClients /> */}
       </main>
     </>
   );

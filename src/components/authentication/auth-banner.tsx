@@ -3,9 +3,7 @@ import NextLink from 'next/link';
 import { Box, Chip, Container, Link, Tooltip, Typography } from '@mui/material';
 
 const platformIcons = {
-  Amplify: '/static/icons/amplify.svg',
   Auth0: '/static/icons/auth0.svg',
-  Firebase: '/static/icons/firebase.svg',
   JWT: '/static/icons/jwt.svg',
 };
 
@@ -45,14 +43,8 @@ export const AuthBanner: FC = () => (
             },
           }}
         >
-          <Tooltip title="Amplify">
-            <img alt="Amplify" src={platformIcons.Amplify} />
-          </Tooltip>
           <Tooltip title="Auth0">
             <img alt="Auth0" src={platformIcons.Auth0} />
-          </Tooltip>
-          <Tooltip title="Firebase">
-            <img alt="Firebase" src={platformIcons.Firebase} />
           </Tooltip>
           <Tooltip title="JSON Web Token">
             <img alt="JWT" src={platformIcons.JWT} />

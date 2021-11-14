@@ -5,15 +5,12 @@ import NextLink from 'next/link';
 import { Box, Card, Container, Typography } from '@mui/material';
 import { GuestGuard } from '../../components/authentication/guest-guard';
 import { AuthBanner } from '../../components/authentication/auth-banner';
-import { AmplifyPasswordRecovery } from '../../components/authentication/amplify-password-recovery';
 import { Logo } from '../../components/logo';
 import { useAuth } from '../../hooks/use-auth';
 import { gtm } from '../../lib/gtm';
 
 const platformIcons = {
-  Amplify: '/static/icons/amplify.svg',
   Auth0: '/static/icons/auth0.svg',
-  Firebase: '/static/icons/firebase.svg',
   JWT: '/static/icons/jwt.svg',
 };
 
@@ -104,9 +101,7 @@ const PasswordRecovery: NextPage = () => {
                 flexGrow: 1,
                 mt: 3,
               }}
-            >
-              {platform === 'Amplify' && <AmplifyPasswordRecovery />}
-            </Box>
+            ></Box>
           </Card>
         </Container>
       </Box>

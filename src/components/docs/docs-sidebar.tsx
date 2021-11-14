@@ -83,16 +83,8 @@ const sections: Section[] = [
     title: 'Authentication',
     items: [
       {
-        title: 'Amplify',
-        path: '/docs/authentication-amplify',
-      },
-      {
         title: 'Auth0',
         path: '/docs/authentication-auth0',
-      },
-      {
-        title: 'Firebase',
-        path: '/docs/authentication-firebase',
       },
       {
         title: 'JWT',
