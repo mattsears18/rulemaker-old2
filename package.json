@@ -37,6 +37,7 @@
     ]
   },
   "dependencies": {
+    "@apollo/client": "3.4.17",
     "@auth0/auth0-spa-js": "^1.13.6",
     "@babel/core": "7.16.0",
     "@emotion/cache": "^11.4.0",
@@ -70,6 +71,7 @@
     "date-fns": "^2.21.3",
     "draft-js": "^0.11.7",
     "formik": "^2.2.7",
+    "graphql": "16.0.1",
     "gray-matter": "^4.0.3",
     "i18next": "^21.4.2",
     "immutable": "4.0.0",

@@ -5,6 +5,7 @@ import { styled } from '@mui/material/styles';
 import { Footer } from './footer';
 import { MainNavbar } from './main-navbar';
 import { MainSidebar } from './main-sidebar';
+import { useAuth } from 'src/hooks/use-auth';
 
 interface MainLayoutProps {
   children?: ReactNode;
@@ -18,6 +19,9 @@ const MainLayoutRoot = styled('div')(({ theme }) => ({
 
 export const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
+
+  const auth = useAuth();
+  console.log(auth);
 
   return (
     <MainLayoutRoot>

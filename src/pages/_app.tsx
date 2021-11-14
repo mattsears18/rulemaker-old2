@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useState } from 'react';
 import type { FC } from 'react';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
@@ -20,6 +21,12 @@ import {
   SettingsConsumer,
   SettingsProvider,
 } from '../contexts/settings-context';
+import {
+  ApolloClient,
+  ApolloProvider,
+  InMemoryCache,
+  HttpLink,
+} from '@apollo/client';
 import { AuthConsumer, AuthProvider } from '../contexts/auth0-context';
 import { gtmConfig } from '../config';
 import { gtm } from '../lib/gtm';
@@ -39,14 +46,42 @@ Router.events.on('routeChangeComplete', nProgress.done);
 
 const clientSideEmotionCache = createEmotionCache();
 
+// const createApolloClient = (authToken) => {
+//   return new ApolloClient({
+//     link: new HttpLink({
+//       uri: 'https://localhost:8080/v1/graphql',
+//       headers: {
+//         Authorization: `Bearer ${authToken}`,
+//       },
+//     }),
+//     cache: new InMemoryCache(),
+//   });
+// };
+
+const createApolloClient = (authToken) => {
+  return new ApolloClient({
+    link: new HttpLink({
+      uri: 'http://localhost:8080/v1/graphql',
+      // headers: {
+      //   Authorization: `Bearer ${authToken}`,
+      // },
+    }),
+    cache: new InMemoryCache(),
+  });
+};
+
 const App: FC<EnhancedAppProps> = (props) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+
+  const idToken = 'ewrt4rythfbdvsfd';
 
   const getLayout = Component.getLayout ?? ((page) => page);
 
   useEffect(() => {
     gtm.initialize(gtmConfig);
   }, []);
+
+  const [client] = useState(createApolloClient(idToken));
 
   return (
     <CacheProvider value={emotionCache}>
@@ -57,34 +92,36 @@ const App: FC<EnhancedAppProps> = (props) => {
       <ReduxProvider store={store}>
         <LocalizationProvider dateAdapter={AdapterDateFns}>
           <AuthProvider>
-            <SettingsProvider>
-              <SettingsConsumer>
-                {({ settings }) => (
-                  <ThemeProvider
-                    theme={createTheme({
-                      direction: settings.direction,
-                      responsiveFontSizes: settings.responsiveFontSizes,
-                      mode: settings.theme,
-                    })}
-                  >
-                    <RTL direction={settings.direction}>
-                      <CssBaseline />
-                      <Toaster position="top-center" />
-                      <SettingsButton />
-                      <AuthConsumer>
-                        {(auth) =>
-                          !auth.isInitialized ? (
-                            <SplashScreen />
-                          ) : (
-                            getLayout(<Component {...pageProps} />)
-                          )
-                        }
-                      </AuthConsumer>
-                    </RTL>
-                  </ThemeProvider>
-                )}
-              </SettingsConsumer>
-            </SettingsProvider>
+            <ApolloProvider client={client}>
+              <SettingsProvider>
+                <SettingsConsumer>
+                  {({ settings }) => (
+                    <ThemeProvider
+                      theme={createTheme({
+                        direction: settings.direction,
+                        responsiveFontSizes: settings.responsiveFontSizes,
+                        mode: settings.theme,
+                      })}
+                    >
+                      <RTL direction={settings.direction}>
+                        <CssBaseline />
+                        <Toaster position="top-center" />
+                        <SettingsButton />
+                        <AuthConsumer>
+                          {(auth) =>
+                            !auth.isInitialized ? (
+                              <SplashScreen />
+                            ) : (
+                              getLayout(<Component {...pageProps} />)
+                            )
+                          }
+                        </AuthConsumer>
+                      </RTL>
+                    </ThemeProvider>
+                  )}
+                </SettingsConsumer>
+              </SettingsProvider>
+            </ApolloProvider>
           </AuthProvider>
         </LocalizationProvider>
       </ReduxProvider>
