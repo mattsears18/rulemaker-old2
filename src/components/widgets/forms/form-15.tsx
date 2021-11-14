@@ -41,14 +41,6 @@ export const Form15: FC = () => (
                 Log in on the internal platform
               </Typography>
             </div>
-            <img
-              alt="Amplify"
-              src="/static/icons/amplify.svg"
-              style={{
-                maxWidth: '53.62px',
-                width: '100%',
-              }}
-            />
           </Box>
           <Box
             sx={{

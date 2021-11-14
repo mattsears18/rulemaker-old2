@@ -6,7 +6,7 @@
 
 [![Known Vulnerabilities](https://snyk.io/test/github/mattsears18/rulemaker/badge.svg)](https://app.snyk.io/org/mattsears18/project/23188dce-e5a2-40f5-aa16-7d57cb9c2ad7)
 
-![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/mattsears18/rulemaker)
+[![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/mattsears18/rulemaker)](https://libraries.io/github/mattsears18/rulemaker)
 
 [![codecov](https://codecov.io/gh/mattsears18/rulemaker/branch/main/graph/badge.svg?token=cT3TmNETId)](https://codecov.io/gh/mattsears18/rulemaker)
 

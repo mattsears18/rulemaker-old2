@@ -6,15 +6,12 @@ import { useRouter } from 'next/router';
 import { Box, Card, Container, Divider, Link, Typography } from '@mui/material';
 import { GuestGuard } from '../../components/authentication/guest-guard';
 import { AuthBanner } from '../../components/authentication/auth-banner';
-import { AmplifyPasswordReset } from '../../components/authentication/amplify-password-reset';
 import { Logo } from '../../components/logo';
 import { useAuth } from '../../hooks/use-auth';
 import { gtm } from '../../lib/gtm';
 
 const platformIcons = {
-  Amplify: '/static/icons/amplify.svg',
   Auth0: '/static/icons/auth0.svg',
-  Firebase: '/static/icons/firebase.svg',
   JWT: '/static/icons/jwt.svg',
 };
 
@@ -107,24 +104,8 @@ const PasswordReset: NextPage = () => {
                 flexGrow: 1,
                 mt: 3,
               }}
-            >
-              {platform === 'Amplify' && <AmplifyPasswordReset />}
-            </Box>
+            ></Box>
             <Divider sx={{ my: 3 }} />
-            {platform === 'Amplify' && (
-              <NextLink
-                href={
-                  disableGuard
-                    ? `/authentication/password-recovery?disableGuard=${disableGuard}`
-                    : '/authentication/password-recovery'
-                }
-                passHref
-              >
-                <Link color="textSecondary" variant="body2">
-                  Did you not receive the code?
-                </Link>
-              </NextLink>
-            )}
           </Card>
         </Container>
       </Box>

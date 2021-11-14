@@ -20,7 +20,7 @@ import {
   SettingsConsumer,
   SettingsProvider,
 } from '../contexts/settings-context';
-import { AuthConsumer, AuthProvider } from '../contexts/jwt-context';
+import { AuthConsumer, AuthProvider } from '../contexts/auth0-context';
 import { gtmConfig } from '../config';
 import { gtm } from '../lib/gtm';
 import { store } from '../store';

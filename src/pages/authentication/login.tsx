@@ -6,18 +6,14 @@ import { useRouter } from 'next/router';
 import { Box, Card, Container, Divider, Link, Typography } from '@mui/material';
 import { GuestGuard } from '../../components/authentication/guest-guard';
 import { AuthBanner } from '../../components/authentication/auth-banner';
-import { AmplifyLogin } from '../../components/authentication/amplify-login';
 import { Auth0Login } from '../../components/authentication/auth0-login';
-import { FirebaseLogin } from '../../components/authentication/firebase-login';
 import { JWTLogin } from '../../components/authentication/jwt-login';
 import { Logo } from '../../components/logo';
 import { useAuth } from '../../hooks/use-auth';
 import { gtm } from '../../lib/gtm';
 
 const platformIcons = {
-  Amplify: '/static/icons/amplify.svg',
   Auth0: '/static/icons/auth0.svg',
-  Firebase: '/static/icons/firebase.svg',
   JWT: '/static/icons/jwt.svg',
 };
 
@@ -111,9 +107,7 @@ const Login: NextPage = () => {
                 mt: 3,
               }}
             >
-              {platform === 'Amplify' && <AmplifyLogin />}
               {platform === 'Auth0' && <Auth0Login />}
-              {platform === 'Firebase' && <FirebaseLogin />}
               {platform === 'JWT' && <JWTLogin />}
             </Box>
             <Divider sx={{ my: 3 }} />
@@ -129,20 +123,6 @@ const Login: NextPage = () => {
                 Create new account
               </Link>
             </NextLink>
-            {platform === 'Amplify' && (
-              <NextLink
-                href={
-                  disableGuard
-                    ? `/authentication/password-recovery?disableGuard=${disableGuard}`
-                    : '/authentication/password-recovery'
-                }
-                passHref
-              >
-                <Link color="textSecondary" sx={{ mt: 1 }} variant="body2">
-                  Forgot password
-                </Link>
-              </NextLink>
-            )}
           </Card>
         </Container>
       </Box>

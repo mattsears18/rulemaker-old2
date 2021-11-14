@@ -29,7 +29,7 @@ const getFeatures = (theme: string): Feature[] => [
   {
     icon: LockIcon,
     image: `/static/home/auth_${theme}.png`,
-    items: ['Amplify', 'Auth0', 'Firebase', 'JWT'],
+    items: ['Auth0', 'JWT'],
     subheader: 'Identity services fully integrated. Choose from:',
     title: 'Auth System',
   },
