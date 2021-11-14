@@ -10,6 +10,7 @@ import { HomeDesigners } from '../components/home/home-designers';
 import { HomeFeatures } from '../components/home/home-features';
 import { HomeTestimonials } from '../components/home/home-testimonials';
 import { gtm } from '../lib/gtm';
+import { RulesList } from 'src/components/rules-list';
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -22,7 +23,8 @@ const Home: NextPage = () => {
         <title>Rulemaker.io</title>
       </Head>
       <main>
-        <div>Hello</div>
+        <br />
+        <RulesList />
         {/* <HomeHero />
         <Divider />
         <HomeDevelopers />
@@ -32,6 +34,7 @@ const Home: NextPage = () => {
         <HomeFeatures />
         <Divider />
         <HomeClients /> */}
+        <br />
       </main>
     </>
   );
