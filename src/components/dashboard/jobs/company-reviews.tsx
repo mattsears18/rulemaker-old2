@@ -15,6 +15,7 @@ import {
 import { Star as StarIcon } from '../../../icons/star';
 import type { Review } from '../../../types/job';
 import { getInitials } from '../../../utils/get-initials';
+import { useAuth } from 'src/hooks/use-auth';
 
 interface CompanyReviewsProps {
   reviews: Review[];
@@ -25,11 +26,7 @@ export const CompanyReviews: FC<CompanyReviewsProps> = (props) => {
   const { reviews, averageRating, ...other } = props;
   const [rating, setRating] = useState<number>(0);
   // To get the user from the authContext, you can use
-  // `const { user } = useAuth();`
-  const user = {
-    avatar: '/static/mock-images/avatars/avatar-anika_visser.png',
-    name: 'Anika Visser',
-  };
+  const { user } = useAuth();
 
   const handleRatingChange = (
     event: ChangeEvent<HTMLInputElement>,

@@ -24,6 +24,7 @@ import { Bell as BellIcon } from '../../icons/bell';
 import { UserCircle as UserCircleIcon } from '../../icons/user-circle';
 import { Search as SearchIcon } from '../../icons/search';
 import { Users as UsersIcon } from '../../icons/users';
+import { useAuth } from 'src/hooks/use-auth';
 
 interface DashboardNavbarProps extends AppBarProps {
   onOpenSidebar?: () => void;
@@ -183,12 +184,7 @@ const NotificationsButton = () => {
 const AccountButton = () => {
   const anchorRef = useRef<HTMLButtonElement | null>(null);
   const [openPopover, setOpenPopover] = useState<boolean>(false);
-  // To get the user from the authContext, you can use
-  // `const { user } = useAuth();`
-  const user = {
-    avatar: '/static/mock-images/avatars/avatar-anika_visser.png',
-    name: 'Anika Visser',
-  };
+  const { user } = useAuth();
 
   const handleOpenPopover = (): void => {
     setOpenPopover(true);

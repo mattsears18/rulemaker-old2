@@ -5,6 +5,7 @@ import { Avatar, Box, IconButton, TextField, Tooltip } from '@mui/material';
 import { PaperAirplane as PaperAirplaneIcon } from '../../../icons/paper-airplane';
 import { Photograph as PhotographIcon } from '../../../icons/photograph';
 import { PaperClip as PaperClipIcon } from '../../../icons/paper-clip';
+import { useAuth } from 'src/hooks/use-auth';
 
 interface ChatMessageAddProps {
   disabled?: boolean;
@@ -16,11 +17,7 @@ export const ChatMessageAdd: FC<ChatMessageAddProps> = (props) => {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const [body, setBody] = useState<string>('');
   // To get the user from the authContext, you can use
-  // `const { user } = useAuth();`
-  const user = {
-    avatar: '/static/mock-images/avatars/avatar-anika_visser.png',
-    name: 'Anika Visser',
-  };
+  const { user } = useAuth();
 
   const handleAttach = (): void => {
     fileInputRef.current.click();
