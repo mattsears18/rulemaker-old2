@@ -1,27 +1,25 @@
-# Redwood
+# Rulemaker
 
-> **NOTICE:** RedwoodJS is very close to a stable version 1.0. In the last two years,
-> the project has matured significantly and is already used in production by a number
-> of startups. We intend to have a 1.0 release candidate before the end of 2021 and
-> to release a truly production-ready 1.0 in early 2022.
+![](https://badgen.net/github/dependabot/mattsears18/rulemaker)
 
-## Getting Started
-- [Tutorial](https://redwoodjs.com/tutorial/welcome-to-redwood): getting started and complete overview guide.
-- [Docs](https://redwoodjs.com/docs/introduction): using the Redwood Router, handling assets and files, list of command-line tools, and more.
-- [Redwood Community](https://community.redwoodjs.com): get help, share tips and tricks, and collaborate on everything about RedwoodJS.
+<!-- ![](https://badgen.net/github/license/mattsears18/rulemaker) -->
 
-### Setup
+[![Known Vulnerabilities](https://snyk.io/test/github/mattsears18/rulemaker/badge.svg)](https://app.snyk.io/org/mattsears18/project/23188dce-e5a2-40f5-aa16-7d57cb9c2ad7)
 
-We use Yarn as our package manager. To get the dependencies installed, just do this in the root directory:
+![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/mattsears18/rulemaker)
 
-```terminal
-yarn install
-```
+[![codecov](https://codecov.io/gh/mattsears18/rulemaker/branch/main/graph/badge.svg?token=cT3TmNETId)](https://codecov.io/gh/mattsears18/rulemaker)
 
-### Fire it up
+[![Maintainability](https://api.codeclimate.com/v1/badges/36bd4a90995e4b71be3e/maintainability)](https://codeclimate.com/github/mattsears18/rulemaker/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/36bd4a90995e4b71be3e/test_coverage)](https://codeclimate.com/github/mattsears18/rulemaker/test_coverage)
 
-```terminal
-yarn redwood dev
-```
+![](https://badgen.net/codeclimate/loc/mattsears18/rulemaker)
+![](https://badgen.net/codeclimate/tech-debt/mattsears18/rulemaker)
+![](https://badgen.net/codeclimate/coverage/mattsears18/rulemaker)
 
-Your browser should open automatically to `http://localhost:8910` to see the web app. Lambda functions run on `http://localhost:8911` and are also proxied to `http://localhost:8910/.redwood/functions/*`.
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/88db6d1567814c4796c8ffd054e419aa)](https://www.codacy.com/gh/mattsears18/rulemaker/dashboard?utm_source=github.com&utm_medium=referral&utm_content=mattsears18/rulemaker&utm_campaign=Badge_Grade)
+
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/mattsears18/rulemaker.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/mattsears18/rulemaker/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/mattsears18/rulemaker.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/mattsears18/rulemaker/context:javascript)
+
+A platform for writing rules through direct democracy
