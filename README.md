@@ -1,25 +1,39 @@
 # Rulemaker
 
-![](https://badgen.net/github/dependabot/mattsears18/rulemaker)
+[Rulemaker](https://rulemaker.io) is a platform for writing version-controlled rules through direct democracy.
 
-<!-- ![](https://badgen.net/github/license/mattsears18/rulemaker) -->
+Rules are written collaboratively, with a complete revision history, so that everyone always knows exactly **who** wrote exactly **what**.
 
-[![Known Vulnerabilities](https://snyk.io/test/github/mattsears18/rulemaker/badge.svg)](https://app.snyk.io/org/mattsears18/project/23188dce-e5a2-40f5-aa16-7d57cb9c2ad7)
+## Examples
 
-![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/mattsears18/rulemaker)
+### Civil Rights
+1. The [NAACP](https://naacp.org), a civil rights organization, writes a `rule` outlining anti-discriminatory hiring practices
+2. Executives at Google see this rule and decide to incorporate it into their hiring process
+3. Google may choose to use any published `version` of the rule
+4. Google elects to use the `latest version` of the rule, thereby automatically incorporating any and all future changes made to the rule by the NAACP.
+5. Google executives are passionate about this rule in particular, so they publically `endorse` it and claim to have `implemenmted` it on Rulemaker.
+6. Every user on Rulemaker can now see that Google approves of the rule.
+7. Prospec
 
-[![codecov](https://codecov.io/gh/mattsears18/rulemaker/branch/main/graph/badge.svg?token=cT3TmNETId)](https://codecov.io/gh/mattsears18/rulemaker)
+### Home Owner's Association (HOA)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/36bd4a90995e4b71be3e/maintainability)](https://codeclimate.com/github/mattsears18/rulemaker/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/36bd4a90995e4b71be3e/test_coverage)](https://codeclimate.com/github/mattsears18/rulemaker/test_coverage)
+### Company Policy
 
-![](https://badgen.net/codeclimate/loc/mattsears18/rulemaker)
-![](https://badgen.net/codeclimate/tech-debt/mattsears18/rulemaker)
-![](https://badgen.net/codeclimate/coverage/mattsears18/rulemaker)
+### Government Entity
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/88db6d1567814c4796c8ffd054e419aa)](https://www.codacy.com/gh/mattsears18/rulemaker/dashboard?utm_source=github.com&utm_medium=referral&utm_content=mattsears18/rulemaker&utm_campaign=Badge_Grade)
+### Meta-rules
+A rulemaking process can itself be governed by other rules.
 
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/mattsears18/rulemaker.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/mattsears18/rulemaker/alerts/)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/mattsears18/rulemaker.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/mattsears18/rulemaker/context:javascript)
 
-A platform for writing rules through direct democracy
+## Details
+
+### Enforcement
+Rulemaker has no enforcement mechanism.
+### Organizations
+A rule
+
+### Locations
+
+### Public / Private
+
+### Voting
