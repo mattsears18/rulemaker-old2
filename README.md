@@ -36,7 +36,8 @@ So called "meta-rules" are no different from any other `rule`, but they are `rul
 - `Rules` can incorporate other `rules` by reference
 
 ### Voting
-- The most obvious initial application of "meta-rules": defining voting procedures. Organizations can develop their own voting procedures, or they can use a voting procedure defined by a rule (written by someone else)...
+- The most obvious initial application of "meta-rules": defining voting procedures. `Organizations` can develop their own voting procedures, or they can use a voting procedure defined by a rule (written by someone else)...
+  - If a `rule` is specific to an `organization` and/or `location`, then the passage of the `rule` may require a majority vote from the individuals that live or work in/for the `organization` and/or `location`.
 
 ### Enforcement
 - Rulemaker currently has no mechanism whatsoever for the enforcement of any `rules`
