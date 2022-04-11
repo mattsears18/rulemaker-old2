@@ -1,6 +1,6 @@
 # [Rulemaker](https://rulemaker.io)
 
-Let's face it. Decisions made by organizations are not always fair, and they don't always reflect the perspectives of the people that they impact. Leaders of many organizations make decisions under clouds of favoritism, nepotism, ignorance, discrimination, self-interest, or even flat out corruption. [Rulemaker](https://rulemaker.io) aims to combat these issues and empower <i>all people</i> by eliminating beaurocracy, increasing transparancy, and providing every person with a voice during decision-making processes.
+Let's face it. Decisions made by organizations are not always fair, and they don't always reflect the perspectives of the people that they impact. Leaders of many organizations make decisions under clouds of favoritism, nepotism, ignorance, discrimination, self-interest, or even flat out corruption. [Rulemaker](https://rulemaker.io) aims to combat these issues and empower <i>all people</i> by eliminating bureaucracy, increasing transparancy, and providing every person with a voice during decision-making processes.
 
 [Rulemaker](https://rulemaker.io) is a platform for writing and sharing version-controlled rules through direct democracy. Rules may be written collaboratively, with a complete revision history, so that everyone always knows exactly **who** wrote exactly **what**, **when**, and **why**. It's like git for policymaking, but without any technical know-how.
 
