@@ -46,6 +46,10 @@ const HomeLayout = ({ children }: HomeLayoutProps) => {
             </div>
           </div>
         </header>
+        <div className="container mx-auto px-6 flex flex-col justify-between items-center relative py-4">
+          <h1>userMetadata:</h1>
+          <p>{isAuthenticated && JSON.stringify(userMetadata)}</p>
+        </div>
         <main className="flex relative z-20 items-center">
           <div className="container mx-auto px-6 flex flex-col justify-between items-center relative py-4">
             {children}
