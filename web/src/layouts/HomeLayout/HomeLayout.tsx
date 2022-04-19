@@ -7,6 +7,16 @@ type HomeLayoutProps = {
 const HomeLayout = ({ children }: HomeLayoutProps) => {
   const { logIn, logOut, isAuthenticated, userMetadata } = useAuth()
 
+  console.log('process.env', process.env)
+  console.log('process.env.AUTH0_DOMAIN', process.env.AUTH0_DOMAIN)
+  console.log('process.env.AUTH0_CLIENT_ID', process.env.AUTH0_CLIENT_ID)
+  console.log(
+    'process.env.AUTH0_CLIENT_SECRET',
+    process.env.AUTH0_CLIENT_SECRET
+  )
+  console.log('process.env.AUTH0_AUDIENCE', process.env.AUTH0_AUDIENCE)
+  console.log('process.env.AUTH0_REDIRECT_URI', process.env.AUTH0_REDIRECT_URI)
+
   return (
     <>
       <div className="dark:bg-gray-800 font-mono bg-white relative overflow-hidden h-screen">
