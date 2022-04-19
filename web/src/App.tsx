@@ -2,13 +2,11 @@ import { AuthProvider } from '@redwoodjs/auth'
 import { Auth0Client } from '@auth0/auth0-spa-js'
 import { FatalErrorBoundary, RedwoodProvider } from '@redwoodjs/web'
 import { RedwoodApolloProvider } from '@redwoodjs/web/apollo'
-import { ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react'
-import mainTheme from 'src/styles/mainTheme'
+import { ChakraProvider, ColorModeScript } from '@chakra-ui/react'
+import mainTheme from 'src/themes/mainTheme'
 
 import FatalErrorPage from 'src/pages/FatalErrorPage'
 import Routes from 'src/Routes'
-
-const theme = extendTheme(mainTheme)
 
 const auth0 = new Auth0Client({
   domain: process.env.AUTH0_DOMAIN,
@@ -34,7 +32,7 @@ const App = () => (
     <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
       <AuthProvider client={auth0} type="auth0">
         <ColorModeScript />
-        <ChakraProvider theme={theme}>
+        <ChakraProvider theme={mainTheme}>
           <RedwoodApolloProvider>
             <Routes />
           </RedwoodApolloProvider>

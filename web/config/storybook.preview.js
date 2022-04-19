@@ -1,16 +1,14 @@
 import * as React from 'react'
-import { ChakraProvider, extendTheme } from '@chakra-ui/react'
-import mainTheme from 'src/styles/mainTheme'
-
-const theme = extendTheme(mainTheme)
+import { ChakraProvider } from '@chakra-ui/react'
+import mainTheme from 'src/themes/mainTheme'
 
 const withChakra = (StoryFn) => {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={mainTheme}>
       <StoryFn />
     </ChakraProvider>
   )
 }
 
 export const decorators = [withChakra]
-export const parameters = { chakra: { theme } }
+export const parameters = { chakra: { theme: mainTheme } }
