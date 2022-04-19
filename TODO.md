@@ -1,11 +1,9 @@
-# Stuff TO DO
-
-## Frontend
-### Anon Pages (unauthenticated user)
+# Frontend
+## Anon Pages (unauthenticated user)
 - About (could just be the home page)
 - Use Cases
 
-### Main Pages (authenticated user)
+## Main Pages (authenticated user)
 - Settings
 - User
   - Profile
@@ -29,12 +27,17 @@
   - List & Search
   - Map
 
-## Backend
+# Backend
 - Authentication
   - Auth0
 - Authorization
   - See what Redwood offers for RBAC
 - GraphQL API
+  - Initial data schema
+    - Users
+    - Rules
+    - Organizations
+    - Locations
   - Full CRUD
     - Authorization - table, row, and field RBAC
     - Limit, offset, search, filter, etc. same features as hasura
