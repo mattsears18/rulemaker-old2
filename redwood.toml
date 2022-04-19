@@ -9,7 +9,15 @@
   title = "Rulemaker"
   port = 8910
   apiUrl = "/api"
-  includeEnvironmentVariables = [] # any ENV vars that should be available to the web side, see https://redwoodjs.com/docs/environment-variables#web
+
+  # any ENV vars that should be available to the web side, see https://redwoodjs.com/docs/environment-variables#web
+  includeEnvironmentVariables = [
+    'AUTH0_DOMAIN',
+    'AUTH0_CLIENT_ID',
+    'AUTH0_AUDIENCE',
+    'AUTH0_REDIRECT_URI'
+  ]
+
 [api]
   port = 8911
 [browser]
