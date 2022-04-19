@@ -2,6 +2,8 @@
 ## Anon Pages (unauthenticated user)
 - About (could just be the home page)
 - Use Cases
+- Privacy Policy (required for Social OAuth)
+- Terms of Service (required for Social OAuth)
 
 ## Main Pages (authenticated user)
 - Settings
