@@ -22,7 +22,11 @@ Let's face it. Decisions made by organizations are not always fair, and they don
 
 ### Household Chores
 
-### Local Government
+### Government
+Perhaps the most obvious use case...
+
+#### Mars
+Mars presents a unique, once-in-a-lifetime opportunity to craft an entirely new civilization from scratch. Rulemaker could be used to develop an inclusive, equitable legal framework for the future Martian people.
 
 
 ## Details - maybe turn this into an FAQ
