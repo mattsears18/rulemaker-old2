@@ -1,4 +1,5 @@
 import { useAuth } from '@redwoodjs/auth'
+import { Button, ButtonGroup } from '@chakra-ui/react'
 
 type HomeLayoutProps = {
   children?: React.ReactNode
@@ -6,16 +7,6 @@ type HomeLayoutProps = {
 
 const HomeLayout = ({ children }: HomeLayoutProps) => {
   const { logIn, logOut, isAuthenticated, userMetadata } = useAuth()
-
-  console.log('process.env', process.env)
-  console.log('process.env.AUTH0_DOMAIN', process.env.AUTH0_DOMAIN)
-  console.log('process.env.AUTH0_CLIENT_ID', process.env.AUTH0_CLIENT_ID)
-  console.log(
-    'process.env.AUTH0_CLIENT_SECRET',
-    process.env.AUTH0_CLIENT_SECRET
-  )
-  console.log('process.env.AUTH0_AUDIENCE', process.env.AUTH0_AUDIENCE)
-  console.log('process.env.AUTH0_REDIRECT_URI', process.env.AUTH0_REDIRECT_URI)
 
   return (
     <>
@@ -34,22 +25,26 @@ const HomeLayout = ({ children }: HomeLayoutProps) => {
                     {isAuthenticated && (
                       <span className="span">{userMetadata.email}</span>
                     )}
-                    <button
-                      className="link-button"
-                      onClick={isAuthenticated ? logOut : logIn}
-                    >
-                      {isAuthenticated ? 'Log Out' : 'Log In'}
-                    </button>
+                    <div>
+                      <Button
+                        colorScheme="blue"
+                        onClick={isAuthenticated ? logOut : logIn}
+                      >
+                        {isAuthenticated ? 'Log Out' : 'Log In'}
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </nav>
             </div>
           </div>
         </header>
-        <div className="container mx-auto px-6 flex flex-col justify-between items-center relative py-4">
-          <h1>userMetadata:</h1>
-          <p>{isAuthenticated && JSON.stringify(userMetadata)}</p>
-        </div>
+        {isAuthenticated && (
+          <div className="container mx-auto px-6 flex flex-col justify-between items-center relative py-4">
+            <h1>userMetadata:</h1>
+            <p>{JSON.stringify(userMetadata)}</p>
+          </div>
+        )}
         <main className="flex relative z-20 items-center">
           <div className="container mx-auto px-6 flex flex-col justify-between items-center relative py-4">
             {children}
