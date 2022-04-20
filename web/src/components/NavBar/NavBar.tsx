@@ -26,7 +26,14 @@ import {
 import { useAuth } from '@redwoodjs/auth'
 
 export default function WithSubnavigation() {
-  const { logIn, logOut, signUp, isAuthenticated, userMetadata } = useAuth()
+  const {
+    loading: authLoading,
+    logIn,
+    logOut,
+    signUp,
+    isAuthenticated,
+    userMetadata,
+  } = useAuth()
   console.log('userMetadata', userMetadata)
 
   const { isOpen, onToggle } = useDisclosure()
@@ -74,38 +81,39 @@ export default function WithSubnavigation() {
           direction={'row'}
           spacing={6}
         >
-          {isAuthenticated ? (
-            <>
-              <Button variant={'link'}>{userMetadata.email}</Button>
-              <Button onClick={logOut}>Log Out</Button>
-            </>
-          ) : (
-            <>
-              <Button
-                as={'a'}
-                fontSize={'sm'}
-                fontWeight={400}
-                variant={'link'}
-                href={'#'}
-                onClick={logIn}
-              >
-                Sign In
-              </Button>
-              <Button
-                display={{ base: 'none', md: 'inline-flex' }}
-                fontSize={'sm'}
-                fontWeight={600}
-                color={'white'}
-                bg={'pink.400'}
-                _hover={{
-                  bg: 'pink.300',
-                }}
-                onClick={signUp}
-              >
-                Sign Up
-              </Button>
-            </>
-          )}
+          {!authLoading &&
+            (isAuthenticated ? (
+              <>
+                <Button variant={'link'}>{userMetadata.email}</Button>
+                <Button onClick={logOut}>Log Out</Button>
+              </>
+            ) : (
+              <>
+                <Button
+                  as={'a'}
+                  fontSize={'sm'}
+                  fontWeight={400}
+                  variant={'link'}
+                  href={'#'}
+                  onClick={logIn}
+                >
+                  Sign In
+                </Button>
+                <Button
+                  display={{ base: 'none', md: 'inline-flex' }}
+                  fontSize={'sm'}
+                  fontWeight={600}
+                  color={'white'}
+                  bg={'pink.400'}
+                  _hover={{
+                    bg: 'pink.300',
+                  }}
+                  onClick={signUp}
+                >
+                  Sign Up
+                </Button>
+              </>
+            ))}
         </Stack>
       </Flex>
 
