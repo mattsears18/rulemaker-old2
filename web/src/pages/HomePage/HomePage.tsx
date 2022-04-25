@@ -7,7 +7,7 @@ const HomePage = () => {
     <>
       <MetaTags title="Home" description="Home page" />
 
-      <UnorderedList>
+      {/* <UnorderedList>
         <ListItem>
           <Link to={routes.rules()}>Rules</Link>
         </ListItem>
@@ -20,7 +20,7 @@ const HomePage = () => {
         <ListItem>
           <Link to={routes.users()}>Users</Link>
         </ListItem>
-      </UnorderedList>
+      </UnorderedList> */}
     </>
   )
 }
