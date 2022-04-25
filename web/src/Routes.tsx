@@ -18,13 +18,7 @@ const Routes = () => {
     <Router>
       <Set wrap={MainLayout}>
         <Route path="/" page={HomePage} name="home" />
-        {/* <Route path="/location" page={LocationPage} name="location" /> */}
-        {/* <Route path="/locations" page={LocationsPage} name="locations" /> */}
-        {/* <Route path="/organization" page={OrganizationPage} name="organization" /> */}
-        {/* <Route path="/organizations" page={OrganizationsPage} name="organizations" /> */}
         <Route path="/profile" page={ProfilePage} name="profile" />
-        {/* <Route path="/rule" page={RulePage} name="rule" /> */}
-        {/* <Route path="/rules" page={RulesPage} name="rules" /> */}
         <Route path="/settings" page={SettingsPage} name="settings" />
         {/* <Route path="/user" page={UserPage} name="user" /> */}
         {/* <Route path="/users" page={UsersPage} name="users" /> */}
