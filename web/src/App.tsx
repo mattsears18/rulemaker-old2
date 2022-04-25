@@ -8,6 +8,7 @@ import mainTheme from 'src/themes/mainTheme'
 import FatalErrorPage from 'src/pages/FatalErrorPage'
 import Routes from 'src/Routes'
 
+import './scaffold.css'
 const auth0 = new Auth0Client({
   domain: process.env.AUTH0_DOMAIN,
   client_id: process.env.AUTH0_CLIENT_ID,
