@@ -98,7 +98,7 @@ const NavBar = () => {
                     />
                   </MenuButton>
                   <MenuList>
-                    <MenuItem>
+                    <MenuItem as="a" href="/profile">
                       <HStack>
                         <Avatar
                           size={'md'}
@@ -113,7 +113,7 @@ const NavBar = () => {
                       </HStack>
                     </MenuItem>
                     <MenuDivider />
-                    <MenuItem>
+                    <MenuItem as="a" href="/settings">
                       <HStack justify="space-between" w="full">
                         <HStack>
                           <Icon as={FaCog} />
