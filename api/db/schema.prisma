@@ -22,3 +22,4 @@ model Rule {
   name String
   content String
 }
+
