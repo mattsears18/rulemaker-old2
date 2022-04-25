@@ -29,3 +29,11 @@ model Organization {
   updated_at DateTime @updatedAt @default(now())
   name String
 }
+
+model Location {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt @default(now())
+  name String
+}
+

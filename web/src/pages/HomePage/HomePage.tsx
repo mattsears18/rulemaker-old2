@@ -14,10 +14,10 @@ const HomePage = () => {
         <ListItem>
           <Link to={routes.organizations()}>Organizations</Link>
         </ListItem>
-        {/* <ListItem>
+        <ListItem>
           <Link to={routes.locations()}>Locations</Link>
         </ListItem>
-        <ListItem>
+        {/* <ListItem>
           <Link to={routes.users()}>Users</Link>
         </ListItem> */}
       </UnorderedList>
