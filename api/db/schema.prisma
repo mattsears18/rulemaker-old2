@@ -23,3 +23,9 @@ model Rule {
   content String
 }
 
+model Organization {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt @default(now())
+  name String
+}
