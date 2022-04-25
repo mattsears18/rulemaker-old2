@@ -17,9 +17,9 @@ const HomePage = () => {
         <ListItem>
           <Link to={routes.locations()}>Locations</Link>
         </ListItem>
-        {/* <ListItem>
+        <ListItem>
           <Link to={routes.users()}>Users</Link>
-        </ListItem> */}
+        </ListItem>
       </UnorderedList>
     </>
   )
