@@ -9,7 +9,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
       <NavBar />
-      <Container marginTop={4}>
+      <Container marginTop={4} maxW="container.xl">
         <main>{children}</main>
       </Container>
     </>
