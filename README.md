@@ -1,5 +1,9 @@
 # [RuleMaker](https://rulemaker.io)
 
+![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=rulemaker)
+[![wakatime](https://wakatime.com/badge/github/mattsears18/rulemaker.svg)](https://wakatime.com/@mattsears18/projects/pbkjaewvwa)
+
+
 Let's face it. Decisions made by organizations are not always fair, and they don't always reflect the perspectives of the people that they impact. Leaders of many organizations make decisions under clouds of favoritism, nepotism, ignorance, discrimination, self-interest, or even flat out corruption. [RuleMaker](https://rulemaker.io) aims to combat these issues and empower <i>all people</i> by eliminating bureaucracy, increasing transparency, and providing every person with a voice during decision-making processes.
 
 [RuleMaker](https://rulemaker.io) is a platform for writing and sharing version-controlled rules through direct democracy. Rules may be written collaboratively, with a complete revision history, so that everyone always knows exactly **who** wrote exactly **what**, **when**, and **why**. It's like git for policymaking, but without any technical know-how.
