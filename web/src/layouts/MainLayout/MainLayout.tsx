@@ -1,3 +1,6 @@
+import { Container } from '@chakra-ui/react'
+import NavBar from 'src/components/NavBar'
+
 type MainLayoutProps = {
   children?: React.ReactNode
 }
@@ -5,8 +8,10 @@ type MainLayoutProps = {
 const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
-      <h1>Main Layout</h1>
-      {children}
+      <NavBar />
+      <Container>
+        <main>{children}</main>
+      </Container>
     </>
   )
 }
