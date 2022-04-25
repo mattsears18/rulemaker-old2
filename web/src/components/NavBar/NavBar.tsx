@@ -25,8 +25,12 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import { FaCog, FaChevronRight, FaSignOutAlt } from 'react-icons/fa'
+import { routes } from '@redwoodjs/router'
 
-const Links = ['Link 1', 'Link 2', 'Link 3']
+const Links = [
+  'Write a Rule',
+  // 'Rules', 'Organizations', 'Locations', 'Users'
+]
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -113,6 +117,7 @@ const NavBar = () => {
                       </HStack>
                     </MenuItem>
                     <MenuDivider />
+                    {/* TODO use <Link to={routes.settings()}> */}
                     <MenuItem as="a" href="/settings">
                       <HStack justify="space-between" w="full">
                         <HStack>

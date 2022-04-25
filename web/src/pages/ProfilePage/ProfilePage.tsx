@@ -1,19 +1,18 @@
-import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
+import { useAuth } from '@redwoodjs/auth'
+import { Heading } from '@chakra-ui/react'
 
 const ProfilePage = () => {
+  const { isAuthenticated, userMetadata } = useAuth()
   return (
     <>
-      <MetaTags title="Profile" description="Profile page" />
-
-      <h1>ProfilePage</h1>
-      <p>
-        Find me in <code>./web/src/pages/ProfilePage/ProfilePage.tsx</code>
-      </p>
-      <p>
-        My default route is named <code>profile</code>, link to me with `
-        <Link to={routes.profile()}>Profile</Link>`
-      </p>
+      <MetaTags title="Home" description="Home page" />
+      {isAuthenticated && (
+        <>
+          <Heading>{userMetadata.given_name}'s profile</Heading>
+          <p>userMetadata: {JSON.stringify(userMetadata)}</p>
+        </>
+      )}
     </>
   )
 }
