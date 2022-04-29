@@ -2,9 +2,12 @@ import humanize from 'humanize-string'
 
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
-import { Link, routes } from '@redwoodjs/router'
+import { routes } from '@redwoodjs/router'
 
 import { QUERY } from 'src/components/Rule/RulesCell'
+
+import { Icon, Link } from '@chakra-ui/react'
+import { FaEdit, FaTrash } from 'react-icons/fa'
 
 const DELETE_RULE_MUTATION = gql`
   mutation DeleteRuleMutation($id: String!) {
@@ -79,50 +82,49 @@ const RulesList = ({ rules }) => {
       <table className="rw-table">
         <thead>
           <tr>
-            <th>Id</th>
-            <th>Created at</th>
-            <th>Updated at</th>
             <th>Name</th>
             <th>Content</th>
+            <th>Created at</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
         <tbody>
-          {rules.map((rule) => (
-            <tr key={rule.id}>
-              <td>{truncate(rule.id)}</td>
-              <td>{timeTag(rule.created_at)}</td>
-              <td>{timeTag(rule.updated_at)}</td>
-              <td>{truncate(rule.name)}</td>
-              <td>{truncate(rule.content)}</td>
-              <td>
-                <nav className="rw-table-actions">
+          {rules.map((rule) => {
+            return (
+              <tr key={rule.id}>
+                <td>
                   <Link
-                    to={routes.rule({ id: rule.id })}
+                    href={routes.rule({ id: rule.id })}
                     title={'Show rule ' + rule.id + ' detail'}
                     className="rw-button rw-button-small"
                   >
-                    Show
+                    {truncate(rule.name)}
                   </Link>
-                  <Link
-                    to={routes.editRule({ id: rule.id })}
-                    title={'Edit rule ' + rule.id}
-                    className="rw-button rw-button-small rw-button-blue"
-                  >
-                    Edit
-                  </Link>
-                  <button
-                    type="button"
-                    title={'Delete rule ' + rule.id}
-                    className="rw-button rw-button-small rw-button-red"
-                    onClick={() => onDeleteClick(rule.id)}
-                  >
-                    Delete
-                  </button>
-                </nav>
-              </td>
-            </tr>
-          ))}
+                </td>
+                <td>{truncate(rule.content)}</td>
+                <td>{timeTag(rule.created_at)}</td>
+                <td>
+                  <nav className="rw-table-actions">
+                    <Link
+                      href={routes.editRule({ id: rule.id })}
+                      title={'Edit rule ' + rule.id}
+                      className="rw-button rw-button-small rw-button-blue"
+                    >
+                      <Icon as={FaEdit} boxSize={4} />
+                    </Link>
+                    <button
+                      type="button"
+                      title={'Delete rule ' + rule.id}
+                      className="rw-button rw-button-small rw-button-red"
+                      onClick={() => onDeleteClick(rule.id)}
+                    >
+                      <Icon as={FaTrash} boxSize={4} />
+                    </button>
+                  </nav>
+                </td>
+              </tr>
+            )
+          })}
         </tbody>
       </table>
     </div>

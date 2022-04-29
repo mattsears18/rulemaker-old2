@@ -10,7 +10,6 @@ export const QUERY = gql`
     rules {
       id
       created_at
-      updated_at
       name
       content
     }
@@ -23,10 +22,7 @@ export const Empty = () => {
   return (
     <div className="rw-text-center">
       {'No rules yet. '}
-      <Link
-        to={routes.newRule()}
-        className="rw-link"
-      >
+      <Link to={routes.newRule()} className="rw-link">
         {'Create one?'}
       </Link>
     </div>
