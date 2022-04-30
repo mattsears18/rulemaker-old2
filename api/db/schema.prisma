@@ -9,37 +9,43 @@ generator client {
 }
 
 model User {
-  id String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  created_at DateTime @default(now())
-  updated_at DateTime @updatedAt @default(now())
-  auth0_sub String
+  id            String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at    DateTime @default(now())
+  updated_at    DateTime @default(now()) @updatedAt
+  auth0_sub     String
   created_rules Rule[]
+  created_organizations Organization[]
+  created_locations Location[]
 }
 
 model Rule {
-  id String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  created_at DateTime @default(now())
-  updated_at DateTime @updatedAt @default(now())
-  name String
-  content String
-  created_by_user User @relation(fields: [created_by_user_id], references: [id])
-  created_by_user_id String
-  is_public Boolean
-  is_published Boolean
+  id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at         DateTime @default(now())
+  created_by_user    User     @relation(fields: [created_by_user_id], references: [id])
+  created_by_user_id String   @db.Uuid
+  updated_at         DateTime @default(now()) @updatedAt
+  name               String
+  content            String
+  is_public          Boolean  @default(true)
+  is_published       Boolean  @default(false)
 }
 
 model Organization {
-  id String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  id         String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   created_at DateTime @default(now())
-  updated_at DateTime @updatedAt @default(now())
-  name String
-  is_public Boolean
+  created_by_user    User     @relation(fields: [created_by_user_id], references: [id])
+  created_by_user_id String   @db.Uuid
+  updated_at DateTime @default(now()) @updatedAt
+  name       String
+  is_public  Boolean  @default(true)
 }
 
 model Location {
-  id String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  id         String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   created_at DateTime @default(now())
-  updated_at DateTime @updatedAt @default(now())
-  name String
+  created_by_user    User     @relation(fields: [created_by_user_id], references: [id])
+  created_by_user_id String   @db.Uuid
+  updated_at DateTime @default(now()) @updatedAt
+  name       String
+  is_public  Boolean  @default(true)
 }
-
