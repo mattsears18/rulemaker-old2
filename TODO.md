@@ -30,6 +30,8 @@
   - Map
 
 # Backend
+- Setup docker database for local testing
+  - Then set the TEST_DATABASE_URL env var
 - Authentication
   - Auth0
 - Authorization
