@@ -57,7 +57,6 @@ const NavBar = () => {
     isAuthenticated,
     userMetadata,
   } = useAuth()
-  console.log('userMetadata', userMetadata)
 
   return (
     <>
