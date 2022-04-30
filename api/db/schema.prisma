@@ -13,6 +13,7 @@ model User {
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt @default(now())
   auth0_sub String
+  created_rules Rule[]
 }
 
 model Rule {
@@ -21,6 +22,10 @@ model Rule {
   updated_at DateTime @updatedAt @default(now())
   name String
   content String
+  created_by_user User @relation(fields: [created_by_user_id], references: [id])
+  created_by_user_id String
+  is_public Boolean
+  is_published Boolean
 }
 
 model Organization {
@@ -28,6 +33,7 @@ model Organization {
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt @default(now())
   name String
+  is_public Boolean
 }
 
 model Location {
