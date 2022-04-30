@@ -9,13 +9,13 @@ generator client {
 }
 
 model User {
-  id            String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  created_at    DateTime @default(now())
-  updated_at    DateTime @default(now()) @updatedAt
-  auth0_sub     String
-  created_rules Rule[]
+  id                    String         @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at            DateTime       @default(now())
+  updated_at            DateTime       @default(now()) @updatedAt
+  auth0_sub             String
+  created_rules         Rule[]
   created_organizations Organization[]
-  created_locations Location[]
+  created_locations     Location[]
 }
 
 model Rule {
@@ -31,21 +31,21 @@ model Rule {
 }
 
 model Organization {
-  id         String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  created_at DateTime @default(now())
+  id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at         DateTime @default(now())
   created_by_user    User     @relation(fields: [created_by_user_id], references: [id])
   created_by_user_id String   @db.Uuid
-  updated_at DateTime @default(now()) @updatedAt
-  name       String
-  is_public  Boolean  @default(true)
+  updated_at         DateTime @default(now()) @updatedAt
+  name               String
+  is_public          Boolean  @default(true)
 }
 
 model Location {
-  id         String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  created_at DateTime @default(now())
+  id                 String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at         DateTime @default(now())
   created_by_user    User     @relation(fields: [created_by_user_id], references: [id])
   created_by_user_id String   @db.Uuid
-  updated_at DateTime @default(now()) @updatedAt
-  name       String
-  is_public  Boolean  @default(true)
+  updated_at         DateTime @default(now()) @updatedAt
+  name               String
+  is_public          Boolean  @default(true)
 }
