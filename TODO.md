@@ -1,5 +1,5 @@
 # Frontend
-## Anon Pages (unauthenticated user)
+## Anon Pages (unauthenticated user) - Might use SquareSpace for this
 - About (could just be the home page)
 - Use Cases
 - Privacy Policy (required for Social OAuth)
@@ -30,26 +30,23 @@
   - Map
 
 # Backend
-- Setup docker database for local testing
-  - Then set the TEST_DATABASE_URL env var
-- Authentication
-  - Auth0
 - Authorization
-  - See what Redwood offers for RBAC
+  - Learn Redwood RBAC
 - GraphQL API
   - Initial data schema
     - Users
+      - Make this sync with auth0
+        - Don't duplicate any fields, but create/delete the users in the DB when they're created/deleted in auth0
     - Rules
     - Organizations
     - Locations
   - Full CRUD
     - Authorization - table, row, and field RBAC
     - Limit, offset, search, filter, etc. same features as hasura
-    - Auto-relationships based on foreign keys
-- DevOps (CI/CD)
-  - 100% auto-deploys from git
-  - Super efficient testing
-  - Code coverge and code quality checks
-- Infrastructure as Code
-  - Terraform? or Pulumi?
-  - What works well with Redwood?
+      - Redwood/Prisma probably already provides all of this, but confirm
+- DevOps (CI/CD) Setup
+  - GitHub Actions
+    - Run tests
+    - Code coverge and code quality checks
+    - Typecheck
+    - Prettify
