@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  db:
+    image: postgres
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+      # https://hub.docker.com/_/postgres
+      # Warning: scripts in /docker-entrypoint-initdb.d are only run if you start the container with a data directory that is empt
+      - ./init_scripts:/docker-entrypoint-initdb.d/
+
+    environment:
+      POSTGRES_DB: ${PG_DB}
+      POSTGRES_USER: ${PG_ROOT_USER}
+      POSTGRES_PASSWORD: ${PG_ROOT_PASSWORD}
+    ports:
+      - '1337:1337'
+    command: -p 1337
+
+  test_db:
+    image: postgres
+    volumes:
+      - test_db_data:/var/lib/postgresql/data
+
+      # https://hub.docker.com/_/postgres
+      # Warning: scripts in /docker-entrypoint-initdb.d are only run if you start the container with a data directory that is empt
+      - ./init_scripts:/docker-entrypoint-initdb.d/
+
+    environment:
+      POSTGRES_DB: ${PG_DB}
+      POSTGRES_USER: ${PG_ROOT_USER}
+      POSTGRES_PASSWORD: ${PG_ROOT_PASSWORD}
+    ports:
+      - '1338:1338'
+    command: -p 1338
+
+volumes:
+  db_data:
+  test_db_data:

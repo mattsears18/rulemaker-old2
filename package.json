@@ -11,7 +11,9 @@
     "@redwoodjs/core": "^1.0.2"
   },
   "scripts": {
-    "build:ci": "yarn rw type-check && yarn rw test --no-watch && yarn rw deploy vercel"
+    "build:ci": "yarn rw type-check && yarn rw test --no-watch && yarn rw deploy vercel",
+    "db": "docker-compose --project-directory ./api/db/dev --project-name rulemaker up",
+    "db:stop": "docker-compose --project-directory ./api/db/dev --project-name rulemaker down"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config",
