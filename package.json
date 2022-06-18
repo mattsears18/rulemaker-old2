@@ -1,29 +1,24 @@
 {
+  "name": "platform",
+  "version": "0.1.0",
   "private": true,
-  "workspaces": {
-    "packages": [
-      "api",
-      "web",
-      "packages/*"
-    ]
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "12.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@redwoodjs/core": "^1.0.2"
-  },
-  "scripts": {
-    "build:ci": "yarn rw type-check && yarn rw test --no-watch && yarn rw deploy vercel",
-    "db": "docker-compose --project-directory ./api/db/dev --project-name rulemaker up",
-    "db:stop": "docker-compose --project-directory ./api/db/dev --project-name rulemaker down"
-  },
-  "eslintConfig": {
-    "extends": "@redwoodjs/eslint-config",
-    "root": true
-  },
-  "engines": {
-    "node": ">=14.17 <=16.x",
-    "yarn": ">=1.15 <2"
-  },
-  "prisma": {
-    "seed": "yarn rw exec seed"
+    "@types/node": "18.0.0",
+    "@types/react": "18.0.14",
+    "@types/react-dom": "18.0.5",
+    "eslint": "8.18.0",
+    "eslint-config-next": "12.1.6",
+    "typescript": "4.7.4"
   }
 }
